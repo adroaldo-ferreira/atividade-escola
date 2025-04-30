@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TapetePorcentagensComponent } from './tapete-porcentagens/tapete-porcentagens.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TapetePorcentagensComponent
   ],
   imports: [
     BrowserModule,
