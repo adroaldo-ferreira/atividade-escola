@@ -1,5 +1,9 @@
-<p>tapete-porcentagens works!</p>
+<h1>Tapete de porcentagens</h1>
 
 <button (click)="sortearValores()" class="btn btn-primary">Sortear</button>
 
 <h2>Valor: {{ valor }}  Percentual: {{ percentual }}%</h2>
+
+<ol>
+  <li *ngFor="let elemento of respostas">{{ elemento }}</li>
+</ol>
