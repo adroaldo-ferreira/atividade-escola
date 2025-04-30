@@ -1,9 +1,43 @@
-<h1>Tapete de porcentagens</h1>
+<div class="container">
+  <h1>Tapete de porcentagens</h1>
+  <!-- <p>Participantes</p><br>-->
 
-<button (click)="sortearValores()" class="btn btn-primary">Sortear</button>
+  <h3>Total acertos {{ competidor.totalPontos }}</h3>
+  <!--
+    <select>
+      <option value="1" selected>
+        1
+      </option>
+      <option value="2">
+        2
+      </option>
+      <option value="3">
+        3
+      </option>
+      <option value="4">
+        4
+      </option>
+    </select>-->
 
-<h2>Valor: {{ valor }}  Percentual: {{ percentual }}%</h2>
+  <!--
+    <button class="btn btn-info" (click)="sortearValores()">Iniciar Jogo</button>-->
 
-<ol>
-  <li *ngFor="let elemento of respostas">{{ elemento }}</li>
-</ol>
+  <br>
+  <button (click)="sortearValores()" class="btn btn-primary">Sortear</button>
+
+  <h2>Valor: {{ valor }}  Percentual: {{ percentual }}%</h2>
+  <!--
+    <ul>
+      <li *ngFor="let elemento of respostas"><strong>{{ elemento }}</strong></li>
+    </ul>-->
+
+  <div class="container text-center">
+    <div class="row" *ngFor="let row of chunkArray(resultados, 5)">
+      <div class="col" *ngFor="let opcao of row">
+        <button class="btn btn-primary botao" (click)="verificarQuestao(opcao)">
+          {{ opcao }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
