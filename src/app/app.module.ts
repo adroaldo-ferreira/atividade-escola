@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TapetePorcentagensComponent } from './tapete-porcentagens/tapete-porcentagens.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TapetePorcentagensComponent
+    TapetePorcentagensComponent,
+    NavbarComponent,
+    HomeComponent
   ],
     imports: [
         BrowserModule,

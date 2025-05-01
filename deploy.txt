@@ -1,0 +1,53 @@
+Como subir um projeto Angular no GitHub Pages
+
+✅ Pré-requisitos
+
+Projeto Angular já criado e funcionando (ng build sem erros).
+
+Git instalado.
+
+Conta no GitHub com repositório criado e configurado com git remote.
+
+1. Instalar o angular-cli-ghpages
+
+No terminal, dentro do projeto Angular:
+
+npm install -g angular-cli-ghpages
+
+2. Configurar angular.json
+
+No seu angular.json, altere a propriedade baseHref do build para o nome do seu repositório:
+
+"options": {
+  "outputPath": "dist/seu-projeto",
+  "baseHref": "/nome-do-repositorio/"
+}
+
+Exemplo: se o repositório se chama meu-site, o baseHref será "/meu-site/".
+
+3. Gerar a build
+
+Execute:
+
+ng build --configuration production
+
+4. Deploy para GitHub Pages
+
+Após a build ser gerada:
+
+npx angular-cli-ghpages --dir=dist/nome-do-seu-projeto
+
+Substitua nome-do-seu-projeto pelo nome exato da pasta gerada dentro de dist.
+
+5. Verificar o site
+
+Acesse:
+
+https://<seu-usuario>.github.io/<nome-do-repositorio>/
+
+✅ Dica extra (caso use o GitHub Actions)
+
+Se quiser automatizar o deploy com GitHub Actions, você pode criar um workflow .yml.
+
+(Deseja um exemplo de arquivo para automação com Actions?)
+

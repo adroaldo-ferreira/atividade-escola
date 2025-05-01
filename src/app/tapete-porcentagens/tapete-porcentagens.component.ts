@@ -18,13 +18,14 @@ export class TapetePorcentagensComponent {
   competidor: Competidor = {
     nome: 'Juvenal',
     cor: 'red',
-    totalPontos: 0
+    totalPontos: 0,
+    totalErros: 0
   }
 
   resultados: number[] =
     [20, 25, 40, 50, 60,
       75, 8, 10, 16, 24,
-      30, 12, 15, 35, 45,
+      30, 12, 15, 36, 45,
       80, 150, 120, 225, 100,
       160, 200, 240, 300, 180];
 
@@ -51,6 +52,8 @@ export class TapetePorcentagensComponent {
   verificarQuestao(opcao: number): void {
     if (opcao == this.resposta) {
       this.competidor.totalPontos += 1;
+    } else {
+      this.competidor.totalErros += 1;
     }
 
     this.totalTentativas++;
@@ -75,4 +78,5 @@ type Competidor = {
   nome: string;
   cor: string;
   totalPontos: number;
+  totalErros: number;
 }
