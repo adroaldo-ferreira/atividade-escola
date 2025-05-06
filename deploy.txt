@@ -35,7 +35,7 @@ ng build --configuration production
 
 Após a build ser gerada:
 
-npx angular-cli-ghpages --dir=dist/nome-do-seu-projeto
+npx angular-cli-ghpages --dir=dist/atividade-escola
 
 Substitua nome-do-seu-projeto pelo nome exato da pasta gerada dentro de dist.
 

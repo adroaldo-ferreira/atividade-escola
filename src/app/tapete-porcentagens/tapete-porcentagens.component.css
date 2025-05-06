@@ -5,3 +5,7 @@ h2 {
 .botao {
   width: 70px;
 }
+
+h1 {
+  text-transform: uppercase;
+}

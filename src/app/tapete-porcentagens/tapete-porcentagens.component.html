@@ -24,9 +24,9 @@
     <button class="btn btn-info" (click)="sortearValores()">Iniciar Jogo</button>-->
 
   <br>
-  <button (click)="sortearValores()" class="btn btn-primary">Sortear</button>
+  <button *ngIf="exibirBotao" (click)="sortearValores()" class="btn btn-primary">Sortear</button>
 
-  <h2>Valor: {{ valor }}  Percentual: {{ percentual }}%</h2>
+  <h2>{{ percentual }}% de {{ valor }} </h2>
   <!--
     <ul>
       <li *ngFor="let elemento of respostas"><strong>{{ elemento }}</strong></li>

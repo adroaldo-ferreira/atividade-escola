@@ -7,13 +7,15 @@ import { TapetePorcentagensComponent } from './tapete-porcentagens/tapete-porcen
 import {ReactiveFormsModule} from "@angular/forms";
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import {FooterComponent} from "./components/footer/footer.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     TapetePorcentagensComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent
   ],
     imports: [
         BrowserModule,

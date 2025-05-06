@@ -14,6 +14,7 @@ export class TapetePorcentagensComponent {
   respostas: number[] = [];
   resposta = 0;
   totalTentativas: number = 0;
+  exibirBotao = true;
 
   competidor: Competidor = {
     nome: 'Juvenal',
@@ -35,6 +36,10 @@ export class TapetePorcentagensComponent {
     this.resposta = this.valor * this.percentual / 100.0;
 
     this.respostas.push(this.resposta);
+
+    if(this.exibirBotao){
+      this.exibirBotao = false;
+    }
   }
 
   sortearValor(array: number[]): number {

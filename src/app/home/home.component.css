@@ -5,3 +5,7 @@ p {
   font-size: 2rem;
   text-indent: 80px;
 }
+
+strong {
+  color: green;
+}
