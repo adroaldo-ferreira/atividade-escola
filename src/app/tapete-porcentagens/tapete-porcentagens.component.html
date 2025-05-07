@@ -1,44 +1,19 @@
-<div class="container">
+<div class="container text-center">
   <h1>Tapete de porcentagens</h1>
-  <!-- <p>Participantes</p><br>-->
+  
+  <h3>Total acertos: {{ competidor.totalPontos }}</h3>
+  <h3>Total erros: {{ competidor.totalErros }}</h3>
 
-  <h3>Total acertos {{ competidor.totalPontos }}</h3>
-  <h3>Total erros {{ competidor.totalErros }}</h3>
-  <!--
-    <select>
-      <option value="1" selected>
-        1
-      </option>
-      <option value="2">
-        2
-      </option>
-      <option value="3">
-        3
-      </option>
-      <option value="4">
-        4
-      </option>
-    </select>-->
+  <button *ngIf="exibirBotao" (click)="sortearValores()" class="btn btn-success">Sortear</button>
 
-  <!--
-    <button class="btn btn-info" (click)="sortearValores()">Iniciar Jogo</button>-->
+  <h2>{{ percentual }}% de {{ valor }}</h2>
 
-  <br>
-  <button *ngIf="exibirBotao" (click)="sortearValores()" class="btn btn-primary">Sortear</button>
-
-  <h2>{{ percentual }}% de {{ valor }} </h2>
-  <!--
-    <ul>
-      <li *ngFor="let elemento of respostas"><strong>{{ elemento }}</strong></li>
-    </ul>-->
-
-  <div class="container text-center">
-    <div class="row" *ngFor="let row of chunkArray(resultados, 5)">
-      <div class="col" *ngFor="let opcao of row">
-        <button class="btn btn-primary botao" (click)="verificarQuestao(opcao)">
-          {{ opcao }}
-        </button>
-      </div>
+  <div class="row">
+    <div class="col-4 col-lg-2-4" *ngFor="let opcao of resultados">
+      <button class="btn btn-primary w-100" (click)="verificarQuestao(opcao)">
+        {{ opcao }}
+      </button>
     </div>
   </div>
+
 </div>

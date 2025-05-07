@@ -2,10 +2,38 @@ h2 {
   color: red;
 }
 
-.botao {
-  width: 70px;
+.botao-custom {
+  width: 80px;
+  /* Ocupa toda a largura da coluna */
+  padding: 1rem;
+  /* Ajuste o padding */
+  font-size: 1rem;
+  /* Ajuste o tamanho da fonte */
+  text-align: center;
+}
+
+/* Ajustes específicos para telas menores */
+@media (max-width: 768px) {
+  .botao-custom {
+    padding: 0.5rem;
+    /* Reduz o padding em telas menores */
+    font-size: 0.8rem;
+    /* Reduz o tamanho da fonte em telas menores */
+  }
 }
 
 h1 {
   text-transform: uppercase;
+}
+
+.col-lg-2-4 {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+@media (min-width: 992px) {
+  .col-lg-2 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
 }
