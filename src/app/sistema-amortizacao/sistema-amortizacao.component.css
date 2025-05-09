@@ -1,0 +1,13 @@
+::ng-deep .p-datatable table {
+  border-collapse: collapse;
+}
+
+::ng-deep .p-datatable th,
+::ng-deep .p-datatable td {
+  border: 1px solid #dee2e6;
+}
+
+::ng-deep .p-button {
+  margin: 10px;
+  border-radius: 15px;
+}

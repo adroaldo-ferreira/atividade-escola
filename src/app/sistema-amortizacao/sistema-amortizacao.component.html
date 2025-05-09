@@ -1,0 +1,48 @@
+<div class="container">
+  <label>Valor</label><br>
+  <p-inputNumber [(ngModel)]="valor"></p-inputNumber>
+  <br>
+  <label>Taxa</label><br>
+  <p-inputNumber [(ngModel)]="taxa"></p-inputNumber>
+  <br>
+  <label>Periodo</label><br>
+  <p-inputNumber [(ngModel)]="periodo"></p-inputNumber>
+  <br>
+
+  <p-radioButton name="sistema" value="PRICE" [(ngModel)]="escolha" inputId="price"
+                 (select)="mudarSistema($event)"></p-radioButton>
+  <label for="price">PRICE</label>
+
+  <p-radioButton name="sistema" value="SAC" [(ngModel)]="escolha" inputId="sac"
+                 (select)="mudarSistema($event)"></p-radioButton>
+  <label for="sac">SAC</label><br>
+
+  <p-button label="Calcular" (onClick)="calcularValores()"/>
+</div>
+
+<div class="container" *ngIf="parcelas.length>0">
+  <div class="grid">
+    <div class="col-12">
+      <p-table [value]="parcelas" [paginator]="true" [rows]="5" styleClass="p-datatable-striped p-datatable-grid">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>#</th>
+            <th>Parcela</th>
+            <th>Juros</th>
+            <th>Amortização</th>
+            <th>Saldo</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-parcela>
+          <tr>
+            <td>{{ parcela.numero }}</td>
+            <td>{{ parcela.pmt.toFixed(2) }}</td>
+            <td>{{ parcela.juros.toFixed(2) }}</td>
+            <td>{{ parcela.amortizacao.toFixed(2) }}</td>
+            <td>{{ parcela.saldo.toFixed(2) }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+</div>
